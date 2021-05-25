@@ -31,24 +31,10 @@ class StarPolygonRenderer {
                 
                 let innerPoint = CGPoint(x: centerX + innerRadius * cos(innerAngle),
                                          y: centerY - innerRadius * sin(innerAngle))
-
-                let attrs: [NSAttributedStringKey: Any] = [
-                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20),
-                    NSAttributedStringKey.foregroundColor: UIColor.red
-                ]
-                let innerStr = NSAttributedString(string: "\(i) inner", attributes: attrs)
-                innerStr.draw(at: innerPoint)
                 cgContext.addLine(to: innerPoint)
                 
                 let outerPoint = CGPoint(x: centerX + outerRadius * cos(outerAngle),
                                          y: centerY - outerRadius * sin(outerAngle))
-
-                let outerAttrs: [NSAttributedStringKey: Any] = [
-                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20),
-                    NSAttributedStringKey.foregroundColor: UIColor.blue
-                ]
-                let outerStr = NSAttributedString(string: "\(i) outer", attributes: outerAttrs)
-                outerStr.draw(at: outerPoint)
                 cgContext.addLine(to: outerPoint)
             }
             
