@@ -13,7 +13,7 @@ class StarPolygonRenderer {
         
         let image = renderer.image { rendererContext in
             let cgContext = rendererContext.cgContext
-            //cgContext.setFillColor(fillColor.cgColor)
+            cgContext.setFillColor(fillColor.cgColor)
             
             let angleStride = (2 * CGFloat.pi) / CGFloat(pointCount)
             
